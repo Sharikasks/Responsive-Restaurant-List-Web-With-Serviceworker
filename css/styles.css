@@ -57,6 +57,7 @@ nav {
 }
 nav h1 {
   margin: auto;
+	padding: 10px;
 }
 nav h1 a {
   color: #fff;
@@ -286,4 +287,27 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media only screen and (max-width : 1024px) {
+	#restaurants-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	#restaurants-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	#restaurants-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.filter-options {
+		height: 150px;
+		text-align: center;
+	}
 }
