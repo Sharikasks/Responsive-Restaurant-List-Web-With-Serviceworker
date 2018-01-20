@@ -412,5 +412,12 @@ nav h1 a {
 
 	#restaurant-cuisine {
 		margin: 0px;
+		font-size: 15pt;
+	}
+
+	#restaurant-name {
+		letter-spacing: 10px;
+		margin-top: 10px;
+		margin-bottom: 5px;
 	}
 }
