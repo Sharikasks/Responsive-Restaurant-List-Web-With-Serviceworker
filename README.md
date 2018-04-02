@@ -1,28 +1,53 @@
-# Mobile Web Specialist Certification Course
+# Restaurant Reviews Project
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+## Overview
+This project is part of FEWDND (Front-End Web Development Nano-Degree) @Udacity. The main purposes are to check for my ability in handling with
+- **grid css** styles (w/o 3rd party framework like bootstrap)
+- **responsive pages** (supporting mobile, tablet, and desktop)
+- **service worker** to cache for offline usage
+- **accessibility** by tabbing
 
-## Project Overview: Stage 1
+## UI (Responsive & Grid CSS)
+### Desktop
+<div style="text-align:center;">
+  <img src="desktop.png" alt="desktop image" style="width: 100%;"/>
+  <p>[Desktop UI Screenshot]</p>
+</div>
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+### Tablet
+<div style="text-align:center;">
+  <img src="tablet.png" alt="tablet image" style="width: 80%;"/>
+  <p>[Tablet UI Screenshot]</p>
+</div>
 
-### Specification
+### Mobile
+<div style="text-align:center;">
+  <img src="mobile.png" alt="mobile image" style="width: 60%;"/>
+  <p>[Mobile UI Screenshot]</p>
+</div>
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+## Implementation details
+### CSS grid
+- grid-template-columns style is used with repeat() macro to indicate the number of columns
+- grid property value is used in display style to indicate the elements support grid layout
 
-### What do I do from here?
+### Responsive
+- used media query (@media) with break points at 1024px, 768px, and 480px.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+### Service Worker
+- two separate service workers are added for the main page(index.html) and the detail page(restaurant_info.html)
+- basic URLs for .html, .css, and .js files are statically added at first
+- whenever there is a fetch request, caches are looked up so to return if there are resources cached. if it is the new fetch request, it will go through the network and be cached.
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and make start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+## References
+- media query
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+- grid css
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+  - https://css-tricks.com/snippets/css/complete-guide-grid/
+- service workers
+  - https://developers.google.com/web/fundamentals/primers/service-workers/
+  - https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
+  - https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
+- Udacity
+  - https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001
