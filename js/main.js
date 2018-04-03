@@ -160,7 +160,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  image.setAttribute('alt', `image of ${restaurant.name}`);
+  image.setAttribute('alt', `An Image from restaurant ${restaurant.name}`);
   li.append(name);
 
   const neighborhood = document.createElement('p');
