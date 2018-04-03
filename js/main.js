@@ -100,6 +100,7 @@ window.initMap = () => {
   self.map.addListener('tilesloaded', function(){
     document.getElementById('map-container').tabIndex="-1";
     document.getElementById('map-container').setAttribute('role', 'application');
+
     console.log(document.getElementById('map-container'));
     let map_children = document.querySelectorAll('#map-container *');
     for (child of map_children) {
@@ -151,8 +152,13 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
+  ul.setAttribute('role', 'list');
+
   restaurants.forEach(restaurant => {
-    ul.append(createRestaurantHTML(restaurant));
+    const restaurant_item = createRestaurantHTML(restaurant);
+    restaurant_item.setAttribute('role', 'listitem');
+
+    ul.append(restaurant_item);
   });
   addMarkersToMap();
 }
