@@ -99,7 +99,6 @@ window.initMap = () => {
   updateRestaurants();
 
   mapLoadCheckTimer = setInterval(function() {
-    console.log('1');
     if(document.querySelectorAll('#map-container button').length == 3) {
       document.getElementById('map-container').tabIndex="-1";
       document.getElementById('map-container').setAttribute('role', 'application');
