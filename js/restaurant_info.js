@@ -1,5 +1,6 @@
 let restaurant;
 var map;
+var mapLoadCheckTimer
 
 /**
  * Add Service Worker
@@ -31,19 +32,24 @@ window.initMap = () => {
       });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-
-      self.map.addListener('tilesloaded', function(){
-        document.getElementById('map-container').tabIndex="-1";
-        document.getElementById('map-container').setAttribute('role', 'application');
-
-        console.log(document.getElementById('map-container'));
-        let map_children = document.querySelectorAll('#map-container *');
-        for (child of map_children) {
-          child.tabIndex="-1";
-        }
-      });
     }
   });
+
+  mapLoadCheckTimer = setInterval(function() {
+    console.log('1');
+    if(document.querySelectorAll('#map-container button').length == 3) {
+      document.getElementById('map-container').tabIndex="-1";
+      document.getElementById('map-container').setAttribute('role', 'application');
+
+      console.log(document.getElementById('map-container'));
+      let map_children = document.querySelectorAll('#map-container *');
+      for (child of map_children) {
+        child.tabIndex="-1";
+      }
+
+      clearInterval(mapLoadCheckTimer);
+    }
+  }, 100);
 }
 
 /**
