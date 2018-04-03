@@ -49,5 +49,9 @@ This project is part of FEWDND (Front-End Web Development Nano-Degree) @Udacity.
   - https://developers.google.com/web/fundamentals/primers/service-workers/
   - https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
   - https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
+- ARIA
+  - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+  - http://karlgroves-sandbox.com/CheatSheets/ARIA-Cheatsheet.html
+  - https://www.w3.org/TR/using-aria/
 - Udacity
   - https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001
