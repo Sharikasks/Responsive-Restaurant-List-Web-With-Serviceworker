@@ -31,6 +31,17 @@ window.initMap = () => {
       });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
+
+      self.map.addListener('tilesloaded', function(){
+        document.getElementById('map-container').tabIndex="-1";
+        document.getElementById('map-container').setAttribute('role', 'application');
+
+        console.log(document.getElementById('map-container'));
+        let map_children = document.querySelectorAll('#map-container *');
+        for (child of map_children) {
+          child.tabIndex="-1";
+        }
+      });
     }
   });
 }
