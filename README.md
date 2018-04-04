@@ -5,7 +5,10 @@ This project is part of FEWDND (Front-End Web Development Nano-Degree) @Udacity.
 - **grid css** styles (w/o 3rd party framework like bootstrap)
 - **responsive pages** (supporting mobile, tablet, and desktop)
 - **service worker** to cache for offline usage
-- **accessibility** by tabbing
+- **accessibility** by manipulating tabIndex, setting more descriptive alt attribute in img tags, and organizing the entire web page semantically.
+
+## How to test?
+In order to test this app, a server should be in action. "python -m SimpleHTTPServer 8000" command runs a simple HTTP server based on the current dicrectory. When index.html page is loaded on a browser, it will send XMLHttpRequest to get a JSON file holding all the restaurant information, which is in data directory. This is how SimpleHTTPServer mimics the HTTP server behaviour to ease out the front end development.
 
 ## UI (Responsive & Grid CSS)
 ### Desktop
@@ -40,6 +43,8 @@ This project is part of FEWDND (Front-End Web Development Nano-Degree) @Udacity.
 - whenever there is a fetch request, caches are looked up so to return if there are resources cached. if it is the new fetch request, it will go through the network and be cached.
 
 ## References
+- **SimpleHTTPServer**
+  - https://docs.python.org/2/library/simplehttpserver.html
 - **media query**
   - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - **grid css**
