@@ -101,7 +101,6 @@ window.initMap = () => {
   mapLoadCheckTimer = setInterval(function() {
     if(document.querySelectorAll('#map-container button').length == 3) {
       document.getElementById('map-container').tabIndex="-1";
-      document.getElementById('map-container').setAttribute('role', 'application');
 
       console.log(document.getElementById('map-container'));
       let map_children = document.querySelectorAll('#map-container *');
@@ -157,12 +156,11 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
-  ul.setAttribute('role', 'navigation');
 
   restaurants.forEach(restaurant => {
-    const restaurant_item = createRestaurantHTML(restaurant);
-    restaurant_item.setAttribute('role', 'listitem');
+    console.log(restaurant);
 
+    const restaurant_item = createRestaurantHTML(restaurant);
     ul.append(restaurant_item);
   });
   addMarkersToMap();
@@ -181,7 +179,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  image.setAttribute('alt', `An Image from restaurant ${restaurant.name}`);
+  image.setAttribute('alt', `${restaurant.cuisine_type} restaurant, ${restaurant.name} at ${restaurant.neighborhood}`);
   li.append(name);
 
   const neighborhood = document.createElement('p');

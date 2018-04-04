@@ -39,7 +39,6 @@ window.initMap = () => {
     console.log('1');
     if(document.querySelectorAll('#map-container button').length == 3) {
       document.getElementById('map-container').tabIndex="-1";
-      document.getElementById('map-container').setAttribute('role', 'application');
 
       console.log(document.getElementById('map-container'));
       let map_children = document.querySelectorAll('#map-container *');
@@ -90,7 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = `An Image from restaurant ${restaurant.name}`;
+  image.alt = `${restaurant.cuisine_type} restaurant, ${restaurant.name} at ${restaurant.neighborhood}`;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
