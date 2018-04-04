@@ -40,18 +40,18 @@ This project is part of FEWDND (Front-End Web Development Nano-Degree) @Udacity.
 - whenever there is a fetch request, caches are looked up so to return if there are resources cached. if it is the new fetch request, it will go through the network and be cached.
 
 ## References
-- media query
+- **media query**
   - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
-- grid css
+- **grid css**
   - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
   - https://css-tricks.com/snippets/css/complete-guide-grid/
-- service workers
+- **service workers**
   - https://developers.google.com/web/fundamentals/primers/service-workers/
   - https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
   - https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
-- ARIA
+- **ARIA**
   - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
   - http://karlgroves-sandbox.com/CheatSheets/ARIA-Cheatsheet.html
   - https://www.w3.org/TR/using-aria/
-- Udacity
+- **Udacity**
   - https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001
